@@ -17,6 +17,26 @@
       overflow: hidden;
       position: relative;
     }
+    /* Honeycomb background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.03'/%3E%3C/svg%3E");
+      background-size: 56px 100px;
+      z-index: 0;
+      mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 20%, transparent 70%);
+    }
+    /* Warm gradient glow behind center */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(124, 58, 237, 0.08) 0%, rgba(245, 158, 11, 0.04) 40%, transparent 70%);
+      z-index: 0;
+    }
     .container {
       text-align: center;
       z-index: 2;
@@ -102,33 +122,33 @@
     }
 
     .bee-fly--1 {
-      font-size: 1.8rem;
+      font-size: 3.5rem;
       animation-name: fly1;
       animation-duration: 28s;
     }
     .bee-fly--2 {
-      font-size: 1.8rem;
+      font-size: 3.5rem;
       filter: hue-rotate(30deg) saturate(1.3);
       animation-name: fly2;
       animation-duration: 32s;
       animation-delay: -8s;
     }
     .bee-fly--3 {
-      font-size: 1.8rem;
+      font-size: 3.5rem;
       filter: hue-rotate(-20deg) saturate(1.2);
       animation-name: fly3;
       animation-duration: 26s;
       animation-delay: -5s;
     }
     .bee-fly--4 {
-      font-size: 1.8rem;
+      font-size: 3.5rem;
       filter: hue-rotate(60deg) saturate(1.1);
       animation-name: fly4;
       animation-duration: 34s;
       animation-delay: -14s;
     }
     .bee-fly--5 {
-      font-size: 1.8rem;
+      font-size: 3.5rem;
       filter: hue-rotate(-40deg) saturate(1.4);
       animation-name: fly5;
       animation-duration: 24s;
